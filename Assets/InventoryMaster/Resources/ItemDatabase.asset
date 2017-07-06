@@ -1,0 +1,533 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4c29ddb3cf21d4e9b0596a8ba26af7, type: 3}
+  m_Name: ItemDatabase
+  m_EditorClassIdentifier: 
+  itemList:
+  - itemName: 
+    itemID: 0
+    itemDesc: 'If you drink this nice bottle you will get some health back.
+
+
+      + 20 Health'
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 0
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Leather Helmet
+    itemID: 1
+    itemDesc: 'This helmet is created out of leather.
+
+      + 10 Health
+
+      + 10 Armor'
+    itemIcon: {fileID: 21300000, guid: 63dca6d4e4e873a4cb09997656d54082, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 4
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 23
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 10
+    - attributeName: Armor
+      attributeValue: 10
+  - itemName: Iron Helmet
+    itemID: 2
+    itemDesc: 'This helmet is created out of iron.
+
+      + 20 Health
+
+      + 20 Armor'
+    itemIcon: {fileID: 21300000, guid: 52b1e3fc60614e446b61e1c6bb148f57, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 4
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 62
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 20
+    - attributeName: Armor
+      attributeValue: 20
+  - itemName: Leather Chest
+    itemID: 3
+    itemDesc: 'This chest is created out of leather.
+
+      + 10 Health
+
+      + 10 Armor'
+    itemIcon: {fileID: 21300000, guid: fcd8bd2db18e92d42a7d14fc0e395888, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 6
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 10
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 10
+    - attributeName: Armor
+      attributeValue: 10
+  - itemName: Iron Chest
+    itemID: 4
+    itemDesc: 'This chest is created out of iron.
+
+      + 20 Health
+
+      + 20 Armor'
+    itemIcon: {fileID: 21300000, guid: f5e3bff24c9077445a126833256147bd, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 6
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 80
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 20
+    - attributeName: Armor
+      attributeValue: 20
+  - itemName: Bow
+    itemID: 5
+    itemDesc: 'This bow is pretty rar.
+
+      + 10 Damage'
+    itemIcon: {fileID: 21300000, guid: fe403a17b83e26d418073d2720f0e3c0, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 1
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 91
+    itemAttributes:
+    - attributeName: Damage
+      attributeValue: 10
+  - itemName: Golden Bow
+    itemID: 6
+    itemDesc: 'This bow is legendary and has a low drop rate.
+
+      + 40 Damage'
+    itemIcon: {fileID: 21300000, guid: ea8c1dc6581654b4a9e7d6257135fbe9, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 1
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 96
+    itemAttributes:
+    - attributeName: Damage
+      attributeValue: 40
+  - itemName: Leather Shoes
+    itemID: 7
+    itemDesc: 'This shoes are created out of leather.
+
+      + 10 Health
+
+      + 10 Armor'
+    itemIcon: {fileID: 21300000, guid: 3677eacbc4390644e97df27f50b96587, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 5
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 1
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 10
+    - attributeName: Armor
+      attributeValue: 10
+  - itemName: Iron Shoes
+    itemID: 8
+    itemDesc: 'This shoes are created out of iron.
+
+      + 20 Health
+
+      + 20 Armor'
+    itemIcon: {fileID: 21300000, guid: ce2f65d4a0c353b409f2821db15cce5e, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 5
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 21
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 20
+    - attributeName: Armor
+      attributeValue: 20
+  - itemName: Sword
+    itemID: 9
+    itemDesc: 'This sword is created out of wood.
+
+      + 10 Damage'
+    itemIcon: {fileID: 21300000, guid: 5bfa49903411b43448e6a525c69fc1fc, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 1
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 25
+    itemAttributes:
+    - attributeName: Damage
+      attributeValue: 10
+  - itemName: HP Bottle
+    itemID: 10
+    itemDesc: 'Drink it to get some health back.
+
+      + 10 Health'
+    itemIcon: {fileID: 21300000, guid: 3ac254c0fa6214047a1df59938ba786f, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 100
+    indexItemInList: 999
+    rarity: 84
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 10
+  - itemName: Mana Bottle
+    itemID: 11
+    itemDesc: 'This mana bottle gives you mana back.
+
+      + 10 Mana'
+    itemIcon: {fileID: 21300000, guid: f1de9e836c79fde4aab8a740ec51eb32, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 5
+    itemType: 2
+    itemWeight: 0
+    maxStack: 10
+    indexItemInList: 999
+    rarity: 12
+    itemAttributes:
+    - attributeName: Mana
+      attributeValue: 10
+  - itemName: Apple
+    itemID: 12
+    itemDesc: 'This apple could be good for applejuice.
+
+      + 10 Health'
+    itemIcon: {fileID: 21300000, guid: a4d3f378d1a88f346af15ee906321f2a, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 100
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 10
+  - itemName: Empty Bottle
+    itemID: 13
+    itemDesc: You can fill some juice into the bottle.
+    itemIcon: {fileID: 21300000, guid: a9893eef89a9a0742b835e8296428609, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 13
+    itemAttributes: []
+  - itemName: Raw Meat
+    itemID: 14
+    itemDesc: 'You can create some nice cooked meat out of it.
+
+      + 5 Health'
+    itemIcon: {fileID: 21300000, guid: b29cbbd10ecf3fd40991d4734d556c17, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 35
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 5
+  - itemName: Cooked Meat
+    itemID: 15
+    itemDesc: 'Very nice cooked meat.
+
+      + 20 Health'
+    itemIcon: {fileID: 21300000, guid: bb168a366e12e314ca3e7cec990092fe, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 72
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 20
+  - itemName: Bread
+    itemID: 16
+    itemDesc: 'Take some meat to it and you will get a nice hamburger.
+
+      + 10 Health'
+    itemIcon: {fileID: 21300000, guid: 0288dbaa9a46b7a4fa8f0b0b773b6024, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 30
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 10
+  - itemName: Hamburger
+    itemID: 17
+    itemDesc: 'This hamburger gives you health and mana back.
+
+      + 20 Health
+
+      + 20 Mana'
+    itemIcon: {fileID: 21300000, guid: bad82843ddb69514c9b6b8e381d175f3, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 30
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 20
+    - attributeName: Mana
+      attributeValue: 20
+  - itemName: Applejuice
+    itemID: 18
+    itemDesc: 'This applejuice gives you alot of health back.
+
+      + 50 Health'
+    itemIcon: {fileID: 21300000, guid: 6dc5762501dd2df4da399f6c16a85907, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 2
+    itemWeight: 0
+    maxStack: 5
+    indexItemInList: 999
+    rarity: 31
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 50
+  - itemName: Green Apple
+    itemID: 19
+    itemDesc: 'This is a green apple.
+
+      + 10 Health'
+    itemIcon: {fileID: 21300000, guid: 982145252540309429f63b70f4ac08d0, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 4
+    itemType: 2
+    itemWeight: 0
+    maxStack: 10
+    indexItemInList: 999
+    rarity: 60
+    itemAttributes:
+    - attributeName: Health
+      attributeValue: 10
+  - itemName: Mace
+    itemID: 20
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: a225d3715e468b04ca832c017dfbcc0a, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 16
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Small Backpack
+    itemID: 21
+    itemDesc: 6 Slots
+    itemIcon: {fileID: 21300000, guid: a1fde3cbf081fbc4cbae9a28818c2a04, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 13
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Slots
+      attributeValue: 6
+  - itemName: Medium Backpack
+    itemID: 22
+    itemDesc: 12 Slots
+    itemIcon: {fileID: 21300000, guid: a1fde3cbf081fbc4cbae9a28818c2a04, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 13
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Slots
+      attributeValue: 12
+  - itemName: Large Backpack
+    itemID: 23
+    itemDesc: 16 Slots
+    itemIcon: {fileID: 21300000, guid: a1fde3cbf081fbc4cbae9a28818c2a04, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 13
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Slots
+      attributeValue: 16
+  - itemName: Military Backpack
+    itemID: 24
+    itemDesc: 20 Slots
+    itemIcon: {fileID: 21300000, guid: a1fde3cbf081fbc4cbae9a28818c2a04, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 13
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Slots
+      attributeValue: 24
+  - itemName: Stone
+    itemID: 25
+    itemDesc: Needed for various crafting recipes.
+    itemIcon: {fileID: 21300000, guid: bf4b5c208d20bb9439c35c23b1c61e75, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 14
+    itemWeight: 0
+    maxStack: 500
+    indexItemInList: 999
+    rarity: 1000
+    itemAttributes: []
+  - itemName: Silver Ore
+    itemID: 26
+    itemDesc: Needed for various crafting recipes.
+    itemIcon: {fileID: 21300000, guid: fda84d756bb04804f99cd88c14e33c8d, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 14
+    itemWeight: 0
+    maxStack: 500
+    indexItemInList: 999
+    rarity: 400
+    itemAttributes: []
+  - itemName: Sapphire
+    itemID: 27
+    itemDesc: Needed for various crafting recipes.
+    itemIcon: {fileID: 21300000, guid: 55c89db8293fc3245a3528d4f22ae895, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 14
+    itemWeight: 0
+    maxStack: 500
+    indexItemInList: 999
+    rarity: 4
+    itemAttributes: []
+  - itemName: Ruby
+    itemID: 28
+    itemDesc: Needed for various crafting recipes.
+    itemIcon: {fileID: 21300000, guid: 2c2827f1dc5beee4e8648ff765f4e00b, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 14
+    itemWeight: 0
+    maxStack: 500
+    indexItemInList: 999
+    rarity: 3
+    itemAttributes: []
+  - itemName: Iron Ore
+    itemID: 29
+    itemDesc: Needed for various crafting recipes.
+    itemIcon: {fileID: 21300000, guid: 0724371b64a73894c8ffa6cec872b99d, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 14
+    itemWeight: 0
+    maxStack: 500
+    indexItemInList: 999
+    rarity: 700
+    itemAttributes: []
+  - itemName: Gold Ore
+    itemID: 30
+    itemDesc: Needed for various crafting recipes.
+    itemIcon: {fileID: 21300000, guid: 571e7e55bc8628441b16cace4bbf54ed, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 14
+    itemWeight: 0
+    maxStack: 500
+    indexItemInList: 999
+    rarity: 198
+    itemAttributes: []
+  - itemName: Emerald
+    itemID: 31
+    itemDesc: Needed for various crafting recipes.
+    itemIcon: {fileID: 21300000, guid: 029dc7d5e8af7334b975f10d59288aa4, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 14
+    itemWeight: 0
+    maxStack: 500
+    indexItemInList: 999
+    rarity: 6
+    itemAttributes: []
+  - itemName: Diamond
+    itemID: 32
+    itemDesc: Needed for various crafting recipes.
+    itemIcon: {fileID: 21300000, guid: 02572f5be2f43bc4096744e628f647a1, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 14
+    itemWeight: 0
+    maxStack: 500
+    indexItemInList: 999
+    rarity: 1
+    itemAttributes: []
+  - itemName: Wood
+    itemID: 33
+    itemDesc: Used for crafting.
+    itemIcon: {fileID: 21300000, guid: 4b2e5198636f76d468502068166be0d4, type: 3}
+    itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 500
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
