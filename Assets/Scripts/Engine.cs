@@ -10,6 +10,7 @@ using System.Linq;
 public class Engine : MonoBehaviour {
 	public PlayerInventory PI;
 	public Player Player;
+	public GameObject EnemyHPBar;
 
 	private System.Random r = new System.Random();
 

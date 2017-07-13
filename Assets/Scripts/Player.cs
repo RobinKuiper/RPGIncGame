@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -11,15 +12,20 @@ public class Player : MonoBehaviour {
 	private float statpoints = 0;
 	private float experience = 0;
 	private float maxhealth = 100;
-	private float health = 60;
+	private float health = 100;
 	private float damage = 5;
 	private float armor = 5;
 //	private float hpr = 1;
 
 	public GameObject HPMANACanvas;
 	public Character Character;
+	public Texture2D Texture2H;
+	public Texture2D Texture1H;
 
 	private float levelupexp;
+	private GameObject target;
+
+	public Vars Config;
 
 	#region GUI Vars
 	Text hpText;
@@ -34,6 +40,8 @@ public class Player : MonoBehaviour {
 
 	void Start () {
 		levelupexp = this.Level * (120 * 1.65f);
+
+		Texture1H = Character.Weapon;
 
 		if (HPMANACanvas != null)
 		{
@@ -50,8 +58,80 @@ public class Player : MonoBehaviour {
 		}
 	}
 
-	void Update(){
-		
+	void OnCollisionEnter2D(Collision2D other) {
+		if (other.transform.tag == "Enemy") {
+			Config.inFight = true;
+			target = other.gameObject;
+			Character.WeaponType = WeaponType.Melee1H;
+			Character.ReplaceSprite(Character.WeaponRenderer, Texture1H);
+			StartCoroutine (attack());
+		}
+
+		if (other.transform.tag == "Tree") {
+			Config.cuttingWood = true;
+			target = other.gameObject;
+			Character.WeaponType = WeaponType.Melee2H;
+			Character.ReplaceSprite(Character.WeaponRenderer, Texture2H);
+			StartCoroutine (cut());
+		}
+
+		if (other.transform.tag == "Vein") {
+			Config.isMining = true;
+			target = other.gameObject;
+			Character.WeaponType = WeaponType.Melee2H;
+			Character.ReplaceSprite(Character.WeaponRenderer, Texture2H);
+			StartCoroutine (mine());
+		}
+	}
+
+	IEnumerator attack(){
+		float time = Character.Animator.runtimeAnimatorController.animationClips.First(x => x.name == "Attack1H").length;
+		while (true) {
+			if (GameObject.FindGameObjectsWithTag ("Enemy").Length == 0 || Config.Dead) {
+				Config.inFight = false;
+				yield break;
+			}
+			Character.Animator.Play ("Attack1H");
+			Invoke ("doDamage", time / 2);
+			yield return new WaitForSeconds (time + 1);
+		}
+	}
+
+	IEnumerator cut(){
+		float time = Character.Animator.runtimeAnimatorController.animationClips.First(x => x.name == "Attack2H").length;
+		while (true) {
+			if (GameObject.FindGameObjectsWithTag ("Tree").Length == 0 || Config.Dead) {
+				Config.cuttingWood = false;
+				yield break;
+			}
+			Character.Animator.Play ("Attack2H");
+			Invoke ("doDamage", time / 2);
+			yield return new WaitForSeconds (time + 1);
+		}
+	}
+
+	IEnumerator mine(){
+		float time = Character.Animator.runtimeAnimatorController.animationClips.First(x => x.name == "Attack2H").length;
+		while (true) {
+			if (GameObject.FindGameObjectsWithTag ("Vein").Length == 0 || Config.Dead) {
+				Config.isMining = false;
+				yield break;
+			}
+			Character.Animator.Play ("Attack2H");
+			Invoke ("doDamage", time / 2);
+			yield return new WaitForSeconds (time + 1);
+		}
+	}
+
+	private void doDamage(){
+		if(GameObject.FindGameObjectsWithTag ("Enemy").Length > 0 && !Config.Dead)
+			target.GetComponent<Orc>().Health -= damage;
+
+		if(GameObject.FindGameObjectsWithTag ("Tree").Length > 0 && !Config.Dead)
+			target.GetComponent<Tree>().Health -= damage;
+
+		if(GameObject.FindGameObjectsWithTag ("Vein").Length > 0 && !Config.Dead)
+			target.GetComponent<Ore>().Health -= damage;
 	}
 
 	private void levelUp() {
@@ -63,7 +143,7 @@ public class Player : MonoBehaviour {
 
 	private void UpdateHPBar()
 	{
-		hpText.text = (this.health + "/" + this.maxhealth);
+		hpText.text = (Mathf.Round(this.health) + "/" + Mathf.Round(this.maxhealth));
 		hpImage.fillAmount = this.health / this.maxhealth;
 	}
 
@@ -108,7 +188,12 @@ public class Player : MonoBehaviour {
 	public float Health{
 		get{ return this.health; }
 		set{ 
+			value = (value < this.health) ? (value + this.armor < this.health) ? value + this.armor : this.health : value;
 			this.health = (value > this.maxhealth) ? this.maxhealth : value; 
+			if (value <= 0) {
+				Config.Dead = true;
+				Character.Animator.Play ("Die");
+			}
 			UpdateHPBar();
 		}
 	}

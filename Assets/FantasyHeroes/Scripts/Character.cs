@@ -83,8 +83,8 @@ namespace Assets.FantasyHeroes.Scripts
             }
         }
 
-        private static void ReplaceSprite(SpriteRenderer part, Texture2D texture)
-        {
+        public static void ReplaceSprite(SpriteRenderer part, Texture2D texture)
+        { 
             if (texture == null)
             {
                 part.sprite = null;
@@ -98,7 +98,7 @@ namespace Assets.FantasyHeroes.Scripts
             part.sprite.name = "Dynamic";
         }
 
-        private static void ReplaceTexture(IEnumerable<SpriteRenderer> parts, Texture2D texture)
+        public static void ReplaceTexture(IEnumerable<SpriteRenderer> parts, Texture2D texture)
         {
             foreach (var part in parts)
             {
